@@ -17,16 +17,54 @@
 </header>
 
 <!-- Video -->
-<div class="content-container">
+<section class="content-container">
     <div class="row">
         <!-- Your images here -->
     </div>
     <div class="button-container">
         <a href="video.html" class="btn btn-danger" role="button">
-            <i class="fas fa-play"></i> Click Here to Watch a Walkaround
+            <i class="fas fa-play"></i> Walkaround
         </a>
     </div>
-</div>
+</section>
+
+<!-- Parts -->
+<section class="content-container">
+    <div class="image-container">
+        <img src="images/itemized.jpg" alt="Your Image Description" class="img-fluid">
+    </div>
+    <div class="button-container">
+        <button id="togglePartsList" class="btn btn-info">
+            <i class="fas fa-cog"></i> <span id="toggleText">Parts List</span>
+        </button>
+    </div>
+    <div id="partsList" class="parts-list" style="display: none;">
+        <ol>
+            <li>Windshield</li>
+            <li>USB Outlet with Voltmeter Indicator</li>
+            <li>Seat Concepts Complete Seat Low Carbon Fiber Gripper</li>
+            <li>ThumperTalk DR-Z400S/SM Luggage Rack</li>
+            <li>DRC MOTO LED EDGE2 Tail Light Kit</li>
+            <li>Tusk Dsport® Adventure Tires F/R with Tubliss Gen 2.0</li>
+            <li>Pro Taper Grips</li>
+            <li>IMS Pro-Series Foot Pegs</li>
+            <li>IMS Folding Shift Lever</li>
+            <li>ThumperTalk DRZ Case Shields</li>
+            <li>ThumperTalk DR-Z400 Skid Plate</li>
+            <li>UNABIKER Radiator Guard (Natural)</li>
+            <li>ZETA Armor Tc-Mount Side/Protector Shields W/ Flasher/Levers</li>
+            <!-- Add more parts as needed -->
+        </ol>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="p-5">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</section>
 
 <!-- Gallery -->
 <section class="p-5">
@@ -83,6 +121,18 @@
 
         // Append the div to the container
         container.appendChild(newDiv);
+    });
+
+    document.getElementById('togglePartsList').addEventListener('click', function () {
+        var partsList = document.getElementById('partsList');
+        var toggleText = document.getElementById('toggleText');
+        if (partsList.style.display === 'none') {
+            partsList.style.display = 'block';
+            toggleText.textContent = 'Hide Parts List';
+        } else {
+            partsList.style.display = 'none';
+            toggleText.textContent = 'Parts List';
+        }
     });
 </script>
 
