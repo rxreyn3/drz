@@ -1,0 +1,22 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    width: 80%; /* Adjust this value to match the width of your images */
+    margin: 0 auto; /* This will center the container */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* This will add some whitespace between the button and the header */
+    width: 100%; /* This will make the button as wide as the container */
+}
+
+.button-container .btn {
+    width: 100%; /* This will make the button as wide as the button container */
+}

@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motorcycle for Sale</title>
+    <title>2022 DRZ-400S For Sale</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/drz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
 <!-- Header -->
 <header class="bg-info text-white text-center p-5">
-    <h1>My Motorcycle for Sale</h1>
-    <p>A brief description of the motorcycle</p>
+    <h1>2022 DRZ-400S For Sale</h1>
+    <p>1500 Miles with all the gear you can slap on it without cracking the engine.</p>
 </header>
+
+<!-- Video -->
+<div class="content-container">
+    <div class="row">
+        <!-- Your images here -->
+    </div>
+    <div class="button-container">
+        <a href="video.html" class="btn btn-danger" role="button">
+            <i class="fas fa-play"></i> Click Here to Watch a Walkaround
+        </a>
+    </div>
+</div>
 
 <!-- Gallery -->
 <section class="p-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <img src="images/IMG_0692.JPEG" class="img-fluid rounded" alt="Motorcycle Image 1">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <img src="images/IMG_0693.JPEG" class="img-fluid rounded" alt="Motorcycle Image 2">
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <img src="images/IMG_0694.JPEG" class="img-fluid rounded" alt="Motorcycle Image 3">
-            </div>
         </div>
     </div>
 </section>
@@ -35,11 +40,51 @@
 <section class="bg-light p-5">
     <div class="container">
         <h2>Contact Me</h2>
-        <p>For more information, please contact me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p>For more information, please contact me at: <a href="mailto:ryan.reynolds@snbracing.com">ryan.reynolds@snbracing.com</a>
+        </p>
     </div>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="js/bootstrap.js"></script>
+
+<!-- Add your JavaScript code here -->
+<script>
+    // Array of image paths
+    var images = ["images/IMG_0692.JPEG",
+        "images/IMG_0693.JPEG",
+        "images/IMG_0694.JPEG",
+        "images/IMG_0695.JPEG",
+        "images/IMG_0696.JPEG",
+        "images/IMG_0697.JPEG",
+        "images/IMG_0698.JPEG",
+        "images/IMG_0699.JPEG",
+        "images/IMG_0700.JPEG",
+        "images/IMG_0701.JPEG",
+        "images/IMG_0702.JPEG",]
+
+    // Select the container where the images will be appended
+    var container = document.querySelector('.container .row');
+
+    // Loop through the array of images
+    images.forEach(function (image) {
+        // Create a new div element for each image
+        var newDiv = document.createElement('div');
+        newDiv.className = 'col-lg-4 col-md-6 mb-4';
+
+        // Create a new img element for each image
+        var newImg = document.createElement('img');
+        newImg.src = image;
+        newImg.className = 'img-fluid rounded';
+        newImg.alt = 'Motorcycle Image';
+
+        // Append the img to the div
+        newDiv.appendChild(newImg);
+
+        // Append the div to the container
+        container.appendChild(newDiv);
+    });
+</script>
+
 </body>
 </html>
