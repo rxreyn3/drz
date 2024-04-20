@@ -5,7 +5,7 @@
 }
 
 .content-container {
-    width: 60%; /* Adjust this value to change the width of your content */
+    width: 80%; /* Adjust this value to change the width of your content */
     margin: 20px auto; /* This will center the container */
 }
 
@@ -28,4 +28,9 @@
 
 .parts-list {
     margin-top: 8px;
+}
+
+.half-size {
+    width: 50%;
+    height: auto;
 }

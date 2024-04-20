@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/drz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
 
 <!-- Header -->
 <header class="bg-info text-white text-center p-5">
     <h1>2022 DRZ-400S For Sale</h1>
+    <h3>Asking Price: $7,000</h3>
     <p>1500 Miles with all the gear you can slap on it without cracking the engine.</p>
 </header>
 
@@ -31,7 +33,7 @@
 <!-- Parts -->
 <section class="content-container">
     <div class="image-container">
-        <img src="images/itemized.jpg" alt="Your Image Description" class="img-fluid">
+        <img src="images/itemized.jpg" alt="Your Image Description" class="img-fluid rounded">
     </div>
     <div class="button-container">
         <button id="togglePartsList" class="btn btn-info">
@@ -46,7 +48,7 @@
             <li>ThumperTalk DR-Z400S/SM Luggage Rack</li>
             <li>DRC MOTO LED EDGE2 Tail Light Kit</li>
             <li>Tusk Dsport® Adventure Tires F/R with Tubliss Gen 2.0</li>
-            <li>Pro Taper Grips</li>
+            <li>New Battery</li>
             <li>IMS Pro-Series Foot Pegs</li>
             <li>IMS Folding Shift Lever</li>
             <li>ThumperTalk DRZ Case Shields</li>
@@ -55,6 +57,18 @@
             <li>ZETA Armor Tc-Mount Side/Protector Shields W/ Flasher/Levers</li>
             <!-- Add more parts as needed -->
         </ol>
+        <p>Additional Accessories:</p>
+        <img src="images/accessories.jpg" alt="Accessories" class="img-fluid half-size rounded">
+        <ul>
+            <li>Nuetech Tubliss Gen 2.0 (Tubeless) Spare</li>
+            <li>ProTaper Pillow Top MX Grips Black/Grey/Yellow</li>
+            <li>Factory Effex Grip Donuts Suzuki Yellow/Black</li>
+            <li>Oil Filters and Gaskets</li>
+            <li>MotoDash 4x6 LED High Low beam Headlight w/Bracket</li>
+            <li>Paddock Stand</li>
+            <li>TUSK Adjustable Lift Stand</li>
+            <li>OEM Hardware and Levers</li>
+        </ul>
     </div>
 </section>
 
@@ -85,7 +99,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="js/bootstrap.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 <!-- Add your JavaScript code here -->
 <script>
     // Array of image paths
@@ -110,14 +124,22 @@
         var newDiv = document.createElement('div');
         newDiv.className = 'col-lg-4 col-md-6 mb-4';
 
+        // Create a new anchor element for each image
+        var newAnchor = document.createElement('a');
+        newAnchor.href = image;
+        newAnchor.setAttribute('data-lightbox', 'gallery');
+
         // Create a new img element for each image
         var newImg = document.createElement('img');
         newImg.src = image;
         newImg.className = 'img-fluid rounded';
         newImg.alt = 'Motorcycle Image';
 
-        // Append the img to the div
-        newDiv.appendChild(newImg);
+        // Append the img to the anchor
+        newAnchor.appendChild(newImg);
+
+        // Append the anchor to the div
+        newDiv.appendChild(newAnchor);
 
         // Append the div to the container
         container.appendChild(newDiv);
