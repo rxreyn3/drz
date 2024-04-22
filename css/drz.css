@@ -34,3 +34,17 @@
     width: 50%;
     height: auto;
 }
+
+.price-tag {
+    display: inline-block;
+    background-color: #0e3eba; /* Change this to your preferred color */
+    color: #f0f2f4; /* Change this to your preferred color */
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+li {
+    font-size: 2em;
+}
